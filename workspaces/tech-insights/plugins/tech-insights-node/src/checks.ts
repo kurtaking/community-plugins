@@ -77,6 +77,12 @@ export interface FactChecker<
    * @returns - Validation result
    */
   validate(check: CheckType): Promise<CheckValidationResponse>;
+
+  /**
+   * Optional method to calculate scores for check results
+   * @param result - The check result to calculate a score for
+   */
+  calculateScore?(result: CheckResultType): number;
 }
 
 /**
@@ -153,6 +159,11 @@ export interface TechInsightCheck {
    * more about the check.
    */
   links?: CheckLink[];
+
+  /**
+   * Score
+   */
+  score?: number;
 }
 
 /**

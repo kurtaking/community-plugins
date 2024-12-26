@@ -70,6 +70,11 @@ export interface CheckResponse {
    * more about the check.
    */
   links?: CheckLink[];
+
+  /**
+   * Score of the check
+   */
+  score?: number;
 }
 
 /**
