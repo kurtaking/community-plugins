@@ -236,6 +236,10 @@ export class JsonRulesEngineFactChecker
     return results;
   }
 
+  calculateScore(result: JsonRuleBooleanCheckResult): number {
+    return result.result ? 100 : 0;
+  }
+
   private async ruleEngineResultsToCheckResponse(
     results: EngineResult,
     techInsightChecks: TechInsightJsonRuleCheck[],
@@ -263,7 +267,10 @@ export class JsonRulesEngineFactChecker
           facts: factResponse,
           result: result.result,
           check: JsonRulesEngineFactChecker.constructCheckResponse(
-            techInsightCheck,
+            {
+              ...techInsightCheck,
+              score: this.calculateScore(result.result),
+            },
             result,
           ),
         };
@@ -286,6 +293,7 @@ export class JsonRulesEngineFactChecker
         : { ...techInsightCheck.metadata, ...techInsightCheck.failureMetadata },
       rule: { conditions: {} },
       links: techInsightCheck.links,
+      score: techInsightCheck.score,
     };
 
     if ('toJSON' in result) {
