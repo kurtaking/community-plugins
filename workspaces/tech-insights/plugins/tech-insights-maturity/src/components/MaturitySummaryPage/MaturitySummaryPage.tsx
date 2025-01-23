@@ -23,8 +23,10 @@ import Alert from '@mui/material/Alert';
 import Grid from '@mui/material/Grid';
 import { MaturityRankInfoCard } from '../MaturityRankInfoCard';
 import { MaturitySummaryTable } from '../MaturitySummaryTable';
-import { getSubEntityFilter } from '@backstage-community/plugin-tech-insights-maturity-react/src/utils';
-import { maturityApiRef } from '@backstage-community/plugin-tech-insights-maturity-react';
+import {
+  maturityApiRef,
+  getSubEntityFilter,
+} from '@backstage-community/plugin-tech-insights-maturity-react';
 
 export const MaturitySummaryPage = () => {
   const { entity } = useEntity();

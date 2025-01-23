@@ -16,7 +16,6 @@
 import { MaturitySummary } from '@backstage-community/plugin-tech-insights-maturity-common';
 import LinearProgress from '@mui/material/LinearProgress';
 import Typography from '@mui/material/Typography';
-
 import Stack from '@mui/material/Stack';
 import React from 'react';
 import { AreaProgress } from '../../helpers/AreaProgress';

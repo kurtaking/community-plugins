@@ -23,21 +23,17 @@ import {
 } from '@backstage-community/plugin-tech-insights-maturity-common';
 import Stack from '@mui/material/Stack';
 import { useTheme } from '@mui/material/styles';
-
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 import { Circle, Line } from 'rc-progress';
 import React from 'react';
-
 import useAsyncRetry from 'react-use/lib/useAsync';
 import {
   getNextRankColor,
   pluralize,
-} from '@backstage-community/plugin-tech-insights-maturity-react/src/utils';
-import { MaturityRankAvatar } from '@backstage-community/plugin-tech-insights-maturity-react/src/components/MaturityRankAvatar';
-import {
   maturityApiRef,
   MaturityLink,
+  MaturityRankAvatar,
 } from '@backstage-community/plugin-tech-insights-maturity-react';
 
 const OverallCell = ({

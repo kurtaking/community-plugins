@@ -24,8 +24,10 @@ import { useDrawingArea } from '@mui/x-charts/hooks';
 import { PieChart } from '@mui/x-charts/PieChart';
 import React from 'react';
 import useAsyncRetry from 'react-use/lib/useAsync';
-import { getRankColor } from '@backstage-community/plugin-tech-insights-maturity-react/src/utils';
-import { maturityApiRef } from '@backstage-community/plugin-tech-insights-maturity-react';
+import {
+  getRankColor,
+  maturityApiRef,
+} from '@backstage-community/plugin-tech-insights-maturity-react';
 
 type Props = {
   entities: Entity[];

@@ -15,7 +15,6 @@
  */
 import React from 'react';
 import useAsyncRetry from 'react-use/lib/useAsync';
-
 import { EmptyState, InfoCard, Progress } from '@backstage/core-components';
 import { useApi } from '@backstage/core-plugin-api';
 import { getCompoundEntityRef } from '@backstage/catalog-model';
