@@ -17,7 +17,7 @@ import {
   MaturityCheckResult,
   Rank,
 } from '@backstage-community/plugin-tech-insights-maturity-common';
-import { ScoringDataFormatter } from './ScoringDataFormatter';
+import { ScoringDataFormatter } from './MaturityDataFormatter';
 import {
   activeOwnershipCheckResult,
   productOwnershipCheckResult,

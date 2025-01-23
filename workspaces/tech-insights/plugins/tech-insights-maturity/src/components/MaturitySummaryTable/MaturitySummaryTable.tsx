@@ -30,10 +30,15 @@ import { Circle, Line } from 'rc-progress';
 import React from 'react';
 
 import useAsyncRetry from 'react-use/lib/useAsync';
-import { maturityApiRef } from '../../api';
-import { getNextRankColor, pluralize } from '../../helpers/utils';
-import { MaturityLink } from '../../helpers/MaturityLink';
-import { MaturityRankAvatar } from '../MaturityRankAvatar';
+import {
+  getNextRankColor,
+  pluralize,
+} from '@backstage-community/plugin-tech-insights-maturity-react/src/utils';
+import { MaturityRankAvatar } from '@backstage-community/plugin-tech-insights-maturity-react/src/components/MaturityRankAvatar';
+import {
+  maturityApiRef,
+  MaturityLink,
+} from '@backstage-community/plugin-tech-insights-maturity-react';
 
 const OverallCell = ({
   areaSummary,

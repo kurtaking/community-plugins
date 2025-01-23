@@ -22,9 +22,11 @@ import { useEntity } from '@backstage/plugin-catalog-react';
 import Grid from '@mui/material/Grid';
 import CardContent from '@mui/material/CardContent';
 import { MaturitySummaryCardContent } from './MaturitySummaryCardContent';
-import { MaturityHelp } from '../../helpers/MaturityHelp';
-import { MaturityRankAvatar } from '../MaturityRankAvatar';
-import { maturityApiRef } from '../../api';
+import {
+  maturityApiRef,
+  MaturityHelp,
+  MaturityRankAvatar,
+} from '@backstage-community/plugin-tech-insights-maturity-react';
 
 export const MaturitySummaryInfoCard = () => {
   const { entity } = useEntity();
@@ -43,7 +45,7 @@ export const MaturitySummaryInfoCard = () => {
         <Grid container>
           <Grid item md={7}>
             Maturity
-            <MaturityHelp />
+            <MaturityHelp link="link goes here" />
           </Grid>
           <Grid item md={5}>
             <MaturityRankAvatar value={value} entity={entity} variant="chip" />

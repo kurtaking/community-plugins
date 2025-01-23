@@ -37,7 +37,7 @@ import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 import { makeStyles, styled } from '@mui/styles';
 import React from 'react';
-import { MaturityRankAvatar } from '../MaturityRankAvatar';
+import { MaturityRankAvatar } from '@backstage-community/plugin-tech-insights-maturity-react/src/components/MaturityRankAvatar';
 import { InsightFacts } from '@backstage-community/plugin-tech-insights-common/client';
 
 interface Props {

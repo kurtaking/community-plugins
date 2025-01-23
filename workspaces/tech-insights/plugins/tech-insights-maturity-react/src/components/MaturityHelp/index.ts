@@ -13,11 +13,4 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-export {
-  techInsightsMaturityPlugin,
-  EntityMaturityScorecardContent,
-  EntityMaturitySummaryContent,
-  MaturityPage,
-  EntityMaturityRankWidget,
-  EntityMaturitySummaryCard,
-} from './plugin';
+export { MaturityHelp, type MaturityHelpProps } from './MaturityHelp'

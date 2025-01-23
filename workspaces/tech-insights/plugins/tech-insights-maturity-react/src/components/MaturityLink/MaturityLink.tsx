@@ -33,14 +33,25 @@ const entityRouteRef = getOrCreateGlobalSingleton(
     }),
 );
 
-type Props = {
+/**
+ * Properties for the MaturityLink component
+ *
+ * @public
+ */
+export type MaturityLinkProps = {
+  /** Entity or entity ref string to link to */
   entity: Entity | string;
 };
 
+/**
+ * Component that creates a link to an entity's maturity page
+ * 
+ * @public
+ */
 export const MaturityLink = ({
   entity,
   children,
-}: PropsWithChildren<Props>) => {
+}: PropsWithChildren<MaturityLinkProps>) => {
   const entityRoute = useRouteRef(entityRouteRef);
   const compoundEntityRef =
     typeof entity === 'string'

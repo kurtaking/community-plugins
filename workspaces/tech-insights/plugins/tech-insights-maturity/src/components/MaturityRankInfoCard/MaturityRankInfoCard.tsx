@@ -25,8 +25,10 @@ import CardContent from '@mui/material/CardContent';
 import Divider from '@mui/material/Divider';
 import Stack from '@mui/material/Stack';
 import { MaturitySummaryCardContent } from '../MaturitySummaryInfoCard/MaturitySummaryCardContent';
-import { MaturityHelp } from '../../helpers/MaturityHelp';
-import { MaturityRankAvatar } from '../MaturityRankAvatar';
+import {
+  MaturityHelp,
+  MaturityRankAvatar,
+} from '@backstage-community/plugin-tech-insights-maturity-react';
 
 type Props = {
   summary: MaturitySummary;
@@ -87,7 +89,7 @@ export const MaturityRankInfoCard = ({ summary }: Props) => {
       title={
         <React.Fragment>
           Maturity Rank
-          <MaturityHelp />
+          <MaturityHelp link="link goes here" />
         </React.Fragment>
       }
     >

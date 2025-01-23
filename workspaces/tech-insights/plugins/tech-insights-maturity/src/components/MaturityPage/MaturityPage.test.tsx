@@ -18,13 +18,16 @@ import { renderInTestApp, TestApiProvider } from '@backstage/test-utils';
 import React from 'react';
 
 import { MaturityPage } from './MaturityPage';
-import { MaturityApi, maturityApiRef } from '../../api';
+import {
+  MaturityApi,
+  maturityApiRef,
+} from '@backstage-community/plugin-tech-insights-maturity-react';
 
 const catalogApi: Partial<CatalogApi> = {
   getEntities: jest.fn().mockResolvedValue([]),
 };
 
-const scoringApi: Partial<MaturityApi> = {
+const maturityApi: Partial<MaturityApi> = {
   getBulkMaturityCheckResults: jest.fn().mockResolvedValue([]),
 };
 
@@ -36,7 +39,7 @@ describe('<MaturityPage />', () => {
       <TestApiProvider
         apis={[
           [catalogApiRef, catalogApi],
-          [maturityApiRef, scoringApi],
+          [maturityApiRef, maturityApi],
         ]}
       >
         <MaturityPage />

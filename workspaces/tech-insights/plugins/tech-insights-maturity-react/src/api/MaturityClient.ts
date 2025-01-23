@@ -35,8 +35,8 @@ import {
   MaturityScore,
   MaturitySummary,
 } from '@backstage-community/plugin-tech-insights-maturity-common';
-import { MaturityApi } from './ScoringDataApi';
-import { ScoringDataFormatter } from './ScoringDataFormatter';
+import { MaturityApi } from './MaturityApi';
+import { ScoringDataFormatter } from './MaturityDataFormatter';
 
 const SDF = new ScoringDataFormatter();
 
@@ -48,7 +48,7 @@ const SDF = new ScoringDataFormatter();
 export class MaturityClient extends TechInsightsClient implements MaturityApi {
   readonly catalogApi: CatalogApi;
 
-  constructor(options: {
+  constructor (options: {
     discoveryApi: DiscoveryApi;
     identityApi: IdentityApi;
     catalogApi: CatalogApi;

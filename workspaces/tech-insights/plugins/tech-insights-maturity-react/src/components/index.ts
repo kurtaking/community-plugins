@@ -13,14 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { ResponseErrorPanel } from '@backstage/core-components';
-import React from 'react';
 
-export const getWarningPanel = (error: Error) => (
-  <ResponseErrorPanel
-    error={error}
-    title="Could not load data"
-    defaultExpanded
-    key="error"
-  />
-);
+// The index file in ./components/ is typically responsible for selecting
+// which components are public API and should be exported from the package.
+
+export * from './MaturityHelp'
+export * from './MaturityLink'
+export * from './MaturityRankAvatar'

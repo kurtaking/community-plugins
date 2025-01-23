@@ -5,22 +5,10 @@
 ```ts
 /// <reference types="react" />
 
-import { ApiRef } from '@backstage/core-plugin-api';
 import { BackstagePlugin } from '@backstage/core-plugin-api';
-import { BulkMaturityCheckResponse } from '@backstage-community/plugin-tech-insights-maturity-common';
-import { BulkMaturitySummary } from '@backstage-community/plugin-tech-insights-maturity-common';
-import { CatalogApi } from '@backstage/catalog-client';
-import { DiscoveryApi } from '@backstage/core-plugin-api';
 import { Entity } from '@backstage/catalog-model/index';
-import { Entity as Entity_2 } from '@backstage/catalog-model';
-import { IdentityApi } from '@backstage/core-plugin-api';
 import { JSX as JSX_2 } from 'react';
-import { MaturityRank } from '@backstage-community/plugin-tech-insights-maturity-common';
-import { MaturityScore } from '@backstage-community/plugin-tech-insights-maturity-common';
-import { MaturitySummary } from '@backstage-community/plugin-tech-insights-maturity-common';
 import { RouteRef } from '@backstage/core-plugin-api';
-import { TechInsightsApi } from '@backstage-community/plugin-tech-insights';
-import { TechInsightsClient } from '@backstage-community/plugin-tech-insights';
 
 // @public (undocumented)
 export const EntityMaturityRankWidget: ({
@@ -30,9 +18,6 @@ export const EntityMaturityRankWidget: ({
 }: {
   entity: Entity;
   size?: number | undefined;
-  /**
-   * @public
-   */
   chip?: boolean | undefined;
 }) => JSX_2.Element;
 
@@ -44,50 +29,6 @@ export const EntityMaturitySummaryCard: () => JSX_2.Element;
 
 // @public (undocumented)
 export const EntityMaturitySummaryContent: () => JSX_2.Element;
-
-// @public
-export type MaturityApi = TechInsightsApi & {
-  getMaturityRank(entity: Entity_2): Promise<MaturityRank>;
-  getMaturityScore(entity: Entity_2): Promise<MaturityScore>;
-  getBulkMaturityCheckResults(
-    entities: Entity_2[],
-  ): Promise<BulkMaturityCheckResponse>;
-  getChildMaturityCheckResults(
-    entity: Entity_2,
-  ): Promise<BulkMaturityCheckResponse>;
-  getMaturitySummary(entity: Entity_2): Promise<MaturitySummary>;
-  getBulkMaturitySummary(entities: Entity_2[]): Promise<BulkMaturitySummary>;
-};
-
-// @public
-export const maturityApiRef: ApiRef<MaturityApi>;
-
-// @public
-export class MaturityClient extends TechInsightsClient implements MaturityApi {
-  constructor(options: {
-    discoveryApi: DiscoveryApi;
-    identityApi: IdentityApi;
-    catalogApi: CatalogApi;
-  });
-  // (undocumented)
-  readonly catalogApi: CatalogApi;
-  // (undocumented)
-  getBulkMaturityCheckResults(
-    entities: Entity_2[],
-  ): Promise<BulkMaturityCheckResponse>;
-  // (undocumented)
-  getBulkMaturitySummary(entities: Entity_2[]): Promise<BulkMaturitySummary>;
-  // (undocumented)
-  getChildMaturityCheckResults(
-    entity: Entity_2,
-  ): Promise<BulkMaturityCheckResponse>;
-  // (undocumented)
-  getMaturityRank(entity: Entity_2): Promise<MaturityRank>;
-  // (undocumented)
-  getMaturityScore(entity: Entity_2): Promise<MaturityScore>;
-  // (undocumented)
-  getMaturitySummary(entity: Entity_2): Promise<MaturitySummary>;
-}
 
 // @public (undocumented)
 export const MaturityPage: () => JSX_2.Element;

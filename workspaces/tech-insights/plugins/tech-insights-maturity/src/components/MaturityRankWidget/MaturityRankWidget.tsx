@@ -18,8 +18,8 @@ import useAsyncRetry from 'react-use/lib/useAsync';
 
 import { Entity } from '@backstage/catalog-model';
 import { useApi } from '@backstage/core-plugin-api';
-import { maturityApiRef } from '../../api';
-import { MaturityRankAvatar } from '../MaturityRankAvatar';
+import { MaturityRankAvatar } from '@backstage-community/plugin-tech-insights-maturity-react/src/components/MaturityRankAvatar';
+import { maturityApiRef } from '@backstage-community/plugin-tech-insights-maturity-react';
 
 type Props = {
   entity: Entity;

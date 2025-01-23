@@ -13,15 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { Link } from '@backstage/core-components';
-import Tooltip from '@mui/material/Tooltip';
-import HelpOutline from '@mui/icons-material/HelpOutline';
-import React from 'react';
 
-export const MaturityHelp = () => (
-  <Tooltip title="Click here to learn more about Maturity!">
-    <Link to="https://github.com/backstage/community-plugins/blob/main/workspaces/tech-insights/plugins/tech-insights-maturity/README.md">
-      <HelpOutline color="info" style={{ paddingLeft: '0.2rem' }} />
-    </Link>
-  </Tooltip>
-);
+// The index file in ./components/ is typically responsible for selecting
+// which components are public API and should be exported from the package.
+
+export { MaturityLink, type MaturityLinkProps } from './MaturityLink';

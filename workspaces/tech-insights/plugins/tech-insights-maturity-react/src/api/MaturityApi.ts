@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 import { TechInsightsApi } from '@backstage-community/plugin-tech-insights';
-import { Entity } from '@backstage/catalog-model';
 import { createApiRef } from '@backstage/core-plugin-api';
 import {
   BulkMaturityCheckResponse,
@@ -23,6 +22,7 @@ import {
   MaturityScore,
   MaturitySummary,
 } from '@backstage-community/plugin-tech-insights-maturity-common';
+import { Entity } from '@backstage/catalog-model';
 
 /**
  *  {@link @backstage/core-plugin-api#ApiRef} for the {@link MaturityApi}
@@ -30,7 +30,7 @@ import {
  * @public
  */
 export const maturityApiRef = createApiRef<MaturityApi>({
-  id: 'plugin.scoringdata.service',
+  id: 'plugin.maturity.service',
 });
 
 /**

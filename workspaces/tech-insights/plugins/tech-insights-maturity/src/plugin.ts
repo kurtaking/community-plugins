@@ -21,10 +21,9 @@ import {
   discoveryApiRef,
   identityApiRef,
 } from '@backstage/core-plugin-api';
-
 import { catalogApiRef } from '@backstage/plugin-catalog-react';
-import { maturityApiRef, MaturityClient } from './api';
 import { rootRouteRef } from './routes';
+import { maturityApiRef, MaturityClient } from '@backstage-community/plugin-tech-insights-maturity-react';
 
 /**
  * @public

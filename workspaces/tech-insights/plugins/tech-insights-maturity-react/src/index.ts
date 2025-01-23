@@ -13,22 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { styled } from '@mui/styles';
-import Tooltip, { tooltipClasses, TooltipProps } from '@mui/material/Tooltip';
-import React from 'react';
 
-export const CustomWidthTooltip = styled(
-  ({ className, ...props }: TooltipProps) => (
-    <Tooltip
-      {...props}
-      style={{ whiteSpace: 'pre-wrap' }}
-      classes={{ popper: className }}
-      arrow
-      placement="right"
-    />
-  ),
-)({
-  [`& .${tooltipClasses.tooltip}`]: {
-    maxWidth: 200,
-  },
-});
+/**
+ * Web library for the tech-insights-maturity plugin.
+ *
+ * @packageDocumentation
+ */
+
+// In this package you might for example export components or hooks
+// that are useful to other plugins or modules.
+
+export * from './api'
+export * from './components';
+export * from './utils';

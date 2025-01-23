@@ -23,9 +23,9 @@ import Chip from '@mui/material/Chip';
 import Tooltip from '@mui/material/Tooltip';
 import { Circle } from 'rc-progress';
 import React from 'react';
-import getRankImg from '../../helpers/Rank';
-import { getNextRankColor, pluralize } from '../../helpers/utils';
-import { MaturityLink } from '../../helpers/MaturityLink';
+import getRankImg from '../../../../tech-insights-maturity/src/helpers/Rank';
+import { getNextRankColor, pluralize } from '../../utils';
+import { MaturityLink } from '@backstage-community/plugin-tech-insights-maturity-react';
 
 const ChipWrapper = ({
   children,
@@ -57,15 +57,31 @@ const ChipWrapper = ({
   );
 };
 
-type Props = {
+/**
+ * Properties for the MaturityRankAvatar component
+ *
+ * @public
+ */
+export type MaturityRankAvatarProps = {
+  /** The rank value and max rank status */
   value: { rank: Rank; isMaxRank?: boolean };
+  /** Optional CSS class name */
   className?: string;
+  /** Optional entity reference */
   entity?: Entity;
+  /** Size of the avatar in pixels */
   size?: number;
+  /** Optional progress information */
   progress?: MaturityProgress;
+  /** Optional display variant */
   variant?: 'chip';
 };
 
+/**
+ * Component that displays a maturity rank as an avatar with optional progress indicator
+ *
+ * @public
+ */
 export const MaturityRankAvatar = ({
   className,
   entity,
@@ -73,7 +89,7 @@ export const MaturityRankAvatar = ({
   size = 27,
   value,
   variant,
-}: Props) => {
+}: MaturityRankAvatarProps) => {
   let result;
   const rank = value.rank;
   const maxRank = value.isMaxRank ? value.rank : Rank.Gold;

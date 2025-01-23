@@ -19,19 +19,13 @@ import {
   RELATION_OWNER_OF,
   RELATION_PARENT_OF,
 } from '@backstage/catalog-model';
-import { humanizeEntityRef } from '@backstage/plugin-catalog-react';
 import { Rank } from '@backstage-community/plugin-tech-insights-maturity-common';
 
-export const entityTitleCompare = (a: Entity, b: Entity) => {
-  const toRef = (entity: Entity) =>
-    entity.metadata.title ??
-    humanizeEntityRef(entity, {
-      defaultKind: 'Component',
-    });
-
-  return toRef(a).localeCompare(toRef(b));
-};
-
+/**
+ * Gets the sub-entity filter for a given entity.
+ *
+ * @public
+ */
 export const getSubEntityFilter = (entity: Entity): { type: string } => {
   let type = RELATION_HAS_PART;
   if (entity.kind === 'Group') {
@@ -43,6 +37,11 @@ export const getSubEntityFilter = (entity: Entity): { type: string } => {
   return { type };
 };
 
+/**
+ * Gets the color associated with a given rank.
+ *
+ * @public
+ */
 export const getRankColor = (rank: Rank) => {
   switch (rank) {
     case Rank.Stone:
@@ -58,6 +57,11 @@ export const getRankColor = (rank: Rank) => {
   }
 };
 
+/**
+ * Gets the color associated with the next rank.
+ *
+ * @public
+ */
 export const getNextRankColor = (rank: Rank, maxRank: Rank) => {
   if (maxRank === rank) {
     return 'limegreen';
@@ -65,6 +69,11 @@ export const getNextRankColor = (rank: Rank, maxRank: Rank) => {
   return getRankColor(rank + 1);
 };
 
+/**
+ * Pluralizes a value if the count is greater than 1
+ *
+ * @public
+ */
 export const pluralize = (count: number) => {
   if (count === 1) {
     return '';

@@ -22,11 +22,11 @@ import { getCompoundEntityRef } from '@backstage/catalog-model';
 import { useEntity } from '@backstage/plugin-catalog-react';
 import Grid from '@mui/material/Grid';
 import Alert from '@mui/material/Alert';
-import { maturityApiRef } from '../../api';
 import { MaturityRankInfoCard } from '../MaturityRankInfoCard';
 import { Rank } from '@backstage-community/plugin-tech-insights-maturity-common';
 import { Box } from '@material-ui/core';
 import { MaturityCheckTable } from './maturityTableRows';
+import { maturityApiRef } from '@backstage-community/plugin-tech-insights-maturity-react';
 
 export const MaturityScorePage = () => {
   const { entity } = useEntity();
