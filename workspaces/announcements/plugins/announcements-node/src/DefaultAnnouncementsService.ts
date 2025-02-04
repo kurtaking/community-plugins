@@ -30,16 +30,18 @@ import {
  * @public
  */
 export type AnnouncementsServiceOptions = {
+  discovery: DiscoveryService;
+  /** @deprecated - use discovery instead */
   discoveryApi: DiscoveryService;
 };
 
 /**
- * Default implementation of the AnnouncementsService
+ * Default backend implementation of the AnnouncementsService
  *
  * @public
  */
 export class DefaultAnnouncementsService implements AnnouncementsService {
-  private readonly discoveryApi: DiscoveryService;
+  private readonly discovery: DiscoveryService;
 
   /**
    * Creates the default instance of AnnouncementsService
@@ -52,14 +54,14 @@ export class DefaultAnnouncementsService implements AnnouncementsService {
   }
 
   constructor(opts: AnnouncementsServiceOptions) {
-    this.discoveryApi = opts.discoveryApi;
+    this.discovery = opts.discovery;
   }
 
   private async fetch<T = any>(
     input: string,
     options?: AnnouncementRequestOptions,
   ): Promise<T> {
-    const baseApiUrl = await this.discoveryApi.getBaseUrl('announcements');
+    const baseApiUrl = await this.discovery.getBaseUrl('announcements');
 
     return fetch(`${baseApiUrl}${input}`, {
       headers: {
