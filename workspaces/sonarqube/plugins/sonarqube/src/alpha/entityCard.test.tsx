@@ -22,10 +22,8 @@ import {
 import { entitySonarQubeCard } from './entityCard';
 import React from 'react';
 import { SonarQubeClient } from '../api';
-import {
-  sonarQubeApiRef,
-  SONARQUBE_PROJECT_KEY_ANNOTATION,
-} from '@backstage-community/plugin-sonarqube-react';
+import { sonarQubeApiRef } from '@backstage-community/plugin-sonarqube-react';
+import { SONARQUBE_PROJECT_KEY_ANNOTATION } from '@backstage-community/plugin-sonarqube-common';
 import { EntityProvider } from '@backstage/plugin-catalog-react';
 
 const mockedEntity = {

@@ -1,5 +1,5 @@
 /*
- * Copyright 2024 The Backstage Authors
+ * Copyright 2025 The Backstage Authors
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,22 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import React from 'react';
-import { EntityContentBlueprint } from '@backstage/plugin-catalog-react/alpha';
-import { isSonarQubeAvailable } from '@backstage-community/plugin-sonarqube-common';
 
 /**
- * @alpha
+ * Common functionalities for the sonarqube plugin.
+ *
+ * @packageDocumentation
  */
-export const entitySonarQubeContent = EntityContentBlueprint.make({
-  name: 'entity',
-  params: {
-    defaultPath: 'sonarqube',
-    defaultTitle: 'SonarQube',
-    filter: isSonarQubeAvailable,
-    loader: () =>
-      import('../components/SonarQubeContentPage').then(m => (
-        <m.SonarQubeContentPage />
-      )),
-  },
-});
+
+export * from './constants';
+export * from './isSonarQubeAvailable';

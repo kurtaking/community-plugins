@@ -20,9 +20,11 @@ import React from 'react';
 import {
   SonarQubeApi,
   sonarQubeApiRef,
+} from '@backstage-community/plugin-sonarqube-react';
+import {
   isSonarQubeAvailable,
   SONARQUBE_PROJECT_KEY_ANNOTATION,
-} from '@backstage-community/plugin-sonarqube-react';
+} from '@backstage-community/plugin-sonarqube-common';
 
 const Providers = ({
   annotation,

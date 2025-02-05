@@ -24,7 +24,7 @@ export interface FindingSummary {
   title: string;
 }
 
-// @public (undocumented)
+// @public @deprecated (undocumented)
 export const isSonarQubeAvailable: (entity: Entity) => boolean;
 
 // @public (undocumented)
@@ -46,7 +46,7 @@ export type Metrics = {
   [key in MetricKey]: string | undefined;
 };
 
-// @public (undocumented)
+// @public @deprecated (undocumented)
 export const SONARQUBE_PROJECT_KEY_ANNOTATION = 'sonarqube.org/project-key';
 
 // @public (undocumented)

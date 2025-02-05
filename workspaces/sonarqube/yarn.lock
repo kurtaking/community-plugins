@@ -2729,10 +2729,20 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@backstage-community/plugin-sonarqube-common@workspace:^, @backstage-community/plugin-sonarqube-common@workspace:plugins/sonarqube-common":
+  version: 0.0.0-use.local
+  resolution: "@backstage-community/plugin-sonarqube-common@workspace:plugins/sonarqube-common"
+  dependencies:
+    "@backstage/catalog-model": ^1.7.3
+    "@backstage/cli": ^0.29.6
+  languageName: unknown
+  linkType: soft
+
 "@backstage-community/plugin-sonarqube-react@workspace:^, @backstage-community/plugin-sonarqube-react@workspace:plugins/sonarqube-react":
   version: 0.0.0-use.local
   resolution: "@backstage-community/plugin-sonarqube-react@workspace:plugins/sonarqube-react"
   dependencies:
+    "@backstage-community/plugin-sonarqube-common": "workspace:^"
     "@backstage/catalog-model": ^1.7.3
     "@backstage/cli": ^0.29.6
     "@backstage/core-plugin-api": ^1.10.3
@@ -2752,6 +2762,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@backstage-community/plugin-sonarqube@workspace:plugins/sonarqube"
   dependencies:
+    "@backstage-community/plugin-sonarqube-common": "workspace:^"
     "@backstage-community/plugin-sonarqube-react": "workspace:^"
     "@backstage/catalog-model": ^1.7.3
     "@backstage/cli": ^0.29.6

@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
+import { SONARQUBE_PROJECT_KEY_ANNOTATION } from '@backstage-community/plugin-sonarqube-common';
 import { Entity } from '@backstage/catalog-model';
-import { SONARQUBE_PROJECT_KEY_ANNOTATION } from '../components';
 
 export const SONARQUBE_PROJECT_INSTANCE_SEPARATOR = '/';
 

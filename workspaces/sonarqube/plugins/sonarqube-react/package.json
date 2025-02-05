@@ -7,6 +7,7 @@
     "pluginPackages": [
       "@backstage-community/plugin-sonarqube",
       "@backstage-community/plugin-sonarqube-backend",
+      "@backstage-community/plugin-sonarqube-common",
       "@backstage-community/plugin-sonarqube-react"
     ]
   },
@@ -51,6 +52,7 @@
     "test": "backstage-cli package test"
   },
   "dependencies": {
+    "@backstage-community/plugin-sonarqube-common": "workspace:^",
     "@backstage/catalog-model": "^1.7.3",
     "@backstage/core-plugin-api": "^1.10.3"
   },
