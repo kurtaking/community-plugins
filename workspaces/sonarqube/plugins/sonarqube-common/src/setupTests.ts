@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 The Backstage Authors
+ * Copyright 2025 The Backstage Authors
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,20 +13,4 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-import { Entity } from '@backstage/catalog-model';
-
-/**
- * @public
- *
- * @deprecated use the same type from `@backstage-community/plugin-sonarqube-common` instead
- */
-export const SONARQUBE_PROJECT_KEY_ANNOTATION = 'sonarqube.org/project-key';
-
-/**
- * @public
- *
- * @deprecated use the same function from `@backstage-community/plugin-sonarqube-common` instead
- */
-export const isSonarQubeAvailable = (entity: Entity) =>
-  Boolean(entity.metadata.annotations?.[SONARQUBE_PROJECT_KEY_ANNOTATION]);
+export {};

@@ -21,7 +21,6 @@ import {
 import {
   sonarQubeApiRef,
   useProjectInfo,
-  SONARQUBE_PROJECT_KEY_ANNOTATION,
 } from '@backstage-community/plugin-sonarqube-react';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
@@ -45,6 +44,7 @@ import {
   VulnerabilitiesRatingCard,
 } from './MetricInsights';
 import { DuplicationRating } from '../SonarQubeTable/types';
+import { SONARQUBE_PROJECT_KEY_ANNOTATION } from '@backstage-community/plugin-sonarqube-common';
 
 const useStyles = makeStyles(theme => ({
   header: {
