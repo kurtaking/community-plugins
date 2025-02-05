@@ -23,10 +23,8 @@ import {
 import { EntityProvider } from '@backstage/plugin-catalog-react';
 import { SonarQubeClient } from '../api';
 import React from 'react';
-import {
-  sonarQubeApiRef,
-  SONARQUBE_PROJECT_KEY_ANNOTATION,
-} from '@backstage-community/plugin-sonarqube-react';
+import { sonarQubeApiRef } from '@backstage-community/plugin-sonarqube-react';
+import { SONARQUBE_PROJECT_KEY_ANNOTATION } from '@backstage-community/plugin-sonarqube-common';
 
 const mockedEntity = {
   metadata: {

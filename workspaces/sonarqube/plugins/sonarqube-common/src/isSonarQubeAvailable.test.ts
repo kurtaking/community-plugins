@@ -15,10 +15,8 @@
  */
 
 import { Entity } from '@backstage/catalog-model';
-import {
-  isSonarQubeAvailable,
-  SONARQUBE_PROJECT_KEY_ANNOTATION,
-} from './isSonarQubeAvailable';
+import { isSonarQubeAvailable } from './isSonarQubeAvailable';
+import { SONARQUBE_PROJECT_KEY_ANNOTATION } from './constants';
 
 const createDummyEntity = (sonarqubeAnnotationValue: string): Entity => {
   return {

@@ -15,7 +15,7 @@
  */
 import { compatWrapper } from '@backstage/core-compat-api';
 import { EntityCardBlueprint } from '@backstage/plugin-catalog-react/alpha';
-import { isSonarQubeAvailable } from '@backstage-community/plugin-sonarqube-react';
+import { isSonarQubeAvailable } from '@backstage-community/plugin-sonarqube-common';
 import React from 'react';
 
 /**

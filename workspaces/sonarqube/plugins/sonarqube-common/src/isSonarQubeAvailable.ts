@@ -1,5 +1,5 @@
 /*
- * Copyright 2024 The Backstage Authors
+ * Copyright 2022 The Backstage Authors
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,22 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import React from 'react';
-import { EntityContentBlueprint } from '@backstage/plugin-catalog-react/alpha';
-import { isSonarQubeAvailable } from '@backstage-community/plugin-sonarqube-common';
+
+import { Entity } from '@backstage/catalog-model';
+import { SONARQUBE_PROJECT_KEY_ANNOTATION } from './constants';
 
 /**
- * @alpha
+ * Check if the entity has the SonarQube project key annotation.
+ *
+ * @public
  */
-export const entitySonarQubeContent = EntityContentBlueprint.make({
-  name: 'entity',
-  params: {
-    defaultPath: 'sonarqube',
-    defaultTitle: 'SonarQube',
-    filter: isSonarQubeAvailable,
-    loader: () =>
-      import('../components/SonarQubeContentPage').then(m => (
-        <m.SonarQubeContentPage />
-      )),
-  },
-});
+export const isSonarQubeAvailable = (entity: Entity) =>
+  Boolean(entity.metadata.annotations?.[SONARQUBE_PROJECT_KEY_ANNOTATION]);

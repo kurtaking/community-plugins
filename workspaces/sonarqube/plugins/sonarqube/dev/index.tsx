@@ -25,7 +25,7 @@ import {
   SonarQubeApi,
   sonarQubeApiRef,
 } from '@backstage-community/plugin-sonarqube-react';
-import { SONARQUBE_PROJECT_KEY_ANNOTATION } from '@backstage-community/plugin-sonarqube-react';
+import { SONARQUBE_PROJECT_KEY_ANNOTATION } from '@backstage-community/plugin-sonarqube-common';
 
 const entity = (name?: string) =>
   ({

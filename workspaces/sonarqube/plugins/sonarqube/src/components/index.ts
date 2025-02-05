@@ -17,7 +17,7 @@
 import {
   isSonarQubeAvailable as NonDeprecatedIsSonarQubeAvailable,
   SONARQUBE_PROJECT_KEY_ANNOTATION as NON_DEPRECATED_SONARQUBE_PROJECT_KEY_ANNOTATION,
-} from '@backstage-community/plugin-sonarqube-react';
+} from '@backstage-community/plugin-sonarqube-common';
 
 export { SonarQubeCard } from './SonarQubeCard';
 export type { DuplicationRating } from './SonarQubeCard';
